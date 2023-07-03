@@ -9,9 +9,7 @@ export default function HomeScreen({ navigation }) {
       <Button style={styles.button} onPress={() => navigation.navigate("AddTaskScreen")}>
        Adicionar Tarefa
       </Button>
-      <Button Button style={styles.button} onPress={() => navigation.navigate("EditTaskScreen")}>
-        Editar Tarefa
-      </Button>
+      
       <Button Button style={styles.button} onPress={() => navigation.navigate("HomeScreen")}>
         HomeScreen
       </Button>

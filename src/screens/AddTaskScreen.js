@@ -1,9 +1,10 @@
-import { View } from "react-native";TasksRef
 import { Button, Text, TextInput } from "react-native-paper";
 import { styles } from "../utils/styles";
 import { useState } from "react";
 import { db } from "../config/firebase";
 import { addDoc, collection } from "firebase/firestore";
+import { View } from "react-native";
+import React from "react";
 
 export default function AdicionarTasks() {
   const [nome, setNome] = useState("");

@@ -1,5 +1,11 @@
+import { PaperProvider } from "react-native-paper";
 import RootNavigation from "./src";
 
 export default function App() {
-  return <RootNavigation />;
+
+  return (
+    <PaperProvider>
+      <RootNavigation />
+    </PaperProvider>
+  );
 }

@@ -1,6 +1,7 @@
-import * as React from 'react';
-import { View, StyleSheet } from 'react-native';
-import { Button, Snackbar } from 'react-native-paper';
+import * as React from "react";
+import { View } from "react-native";
+import { Text, Button, Snackbar } from "react-native-paper";
+import { styles } from "../utils/styles";
 
 const MyComponent = () => {
   const [visible, setVisible] = React.useState(false);
@@ -11,26 +12,24 @@ const MyComponent = () => {
 
   return (
     <View style={styles.container}>
-      <Button onPress={onToggleSnackBar}>{visible ? 'Hide' : 'Show'}</Button>
+      <View style={styles.container}>
+        <Text variant="headlineLarge">Snackbar</Text>
+      </View>
+      <Button onPress={onToggleSnackBar}>
+        {visible ? "Esconder" : "Mostrar"}
+      </Button>
       <Snackbar
         visible={visible}
         onDismiss={onDismissSnackBar}
         action={{
-          label: 'Undo',
-          onPress: () => {
-          },
-        }}>
-        Isso é uma Snackbar
+          label: "Voltar",
+          onPress: () => {},
+        }}
+      >
+        Acerola!!
       </Snackbar>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'space-between',
-  },
-});
 
 export default MyComponent;

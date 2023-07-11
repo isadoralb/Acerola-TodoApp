@@ -65,5 +65,6 @@ export default function EditTaskScreen({ navigation, route }) {
                 icon={"plus"}
             >Atualizar Tarefa</Button>
         </View>
+
     )
 }
